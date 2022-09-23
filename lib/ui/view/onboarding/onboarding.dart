@@ -4,6 +4,7 @@ import 'package:ellen/ui/view/onboarding/sub_views/pageview_one.dart';
 import 'package:ellen/ui/view/onboarding/sub_views/pageview_six.dart';
 import 'package:ellen/ui/view/onboarding/sub_views/pageview_three.dart';
 import 'package:ellen/utils/colors.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,7 +43,7 @@ class _OnBoardingState extends State<OnBoarding> {
     Icons.person_outline_rounded,
   ];
   List<String> iconsText = [
-    'Intro 1',
+    'Staking',
     'Market',
     'Wallet',
     'Save',
@@ -124,6 +125,8 @@ class _OnBoardingState extends State<OnBoarding> {
             Expanded(
               child: PageView.builder(
                   controller: pageController,
+                  physics: AlwaysScrollableScrollPhysics(),
+                  dragStartBehavior: DragStartBehavior.start,
                   scrollDirection: Axis.horizontal,
                   itemCount: screens.length,
                   pageSnapping: true,

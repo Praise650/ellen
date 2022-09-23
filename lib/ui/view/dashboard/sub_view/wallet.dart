@@ -15,44 +15,22 @@ class _WalletState extends State<Wallet> {
   @override
   void initState() {
     super.initState();
-   showModalBottomSheet(
-        enableDrag: false,
-        elevation: 5.0,
-        isDismissible: true,
-        useRootNavigator: true,
-        context: context,
-        builder: (context) => Container(
-          height: MediaQuery.of(context).size.height * 0.30,
-          width: MediaQuery.of(context).size.width,
-          alignment: Alignment.center,
-          padding: EdgeInsets.all(20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text('You must login to access your assets/crypto'),
-              AppButton(onPressed: (){}, child: Text('Login in with BankID'))
-            ],
-          ),
-        ),
-      );
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      show(context);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Padding(
+    return Padding(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // SizedBox(
-            //   height: MediaQuery.of(context).size.height * 0.2,
-            // ),
-            const Spacer(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
             const Center(
                 child: Text(
               'See all your assets\nRight now you don’t have any assets',
@@ -65,16 +43,11 @@ class _WalletState extends State<Wallet> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
-                  Text('Click here'),
-                  SizedBox(width: 10),
-                  Icon(Icons.refresh),
-                  SizedBox(width: 10),
-                  Text('to view')
+                  Text('Click here to view'),
                 ],
               ),
             ),
           ],
-        ),
       ),
     );
   }

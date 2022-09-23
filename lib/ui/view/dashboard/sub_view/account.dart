@@ -19,20 +19,22 @@ class Account extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.35,
+              height: MediaQuery.of(context).size.height * 0.30,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   color: AppColor.appSecondaryColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.max,
                 children: List.generate(
                     text.length,
                     (index) => Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             ListTile(
                               // elevation: 0,
@@ -81,13 +83,13 @@ class Account extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             RichText(
                 textAlign: TextAlign.left,
-                text: TextSpan(text: 'Version ', children: [
+                text: const TextSpan(text: 'Version ', children: [
                   TextSpan(text: '1.5.80'),
                 ])),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             SizedBox(
               height: 60,
               child: Material(
@@ -112,7 +114,7 @@ class Account extends StatelessWidget {
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
+                  side: const BorderSide(
                     color: AppColor.colorTeal,
                     width: 2,
                     style: BorderStyle.solid,
@@ -120,7 +122,7 @@ class Account extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             const Align(
                 alignment: Alignment.center,
                 child: Text(
