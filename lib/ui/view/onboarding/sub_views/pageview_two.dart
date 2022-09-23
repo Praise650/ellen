@@ -19,9 +19,9 @@ class PageViewTwo extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 40.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
-                      'Multicrypto Support',
+                      'Staking',
                       style: TextStyle(color: Colors.teal, fontSize: 24),
                     ),
                     SizedBox(

@@ -1,6 +1,6 @@
 import 'package:ellen/ui/view/dashboard/sub_view/account.dart';
 import 'package:ellen/ui/view/dashboard/sub_view/buy.dart';
-import 'package:ellen/ui/view/dashboard/sub_view/market.dart';
+import 'package:ellen/ui/view/market/market.dart';
 import 'package:ellen/ui/view/dashboard/sub_view/save.dart';
 import 'package:ellen/ui/view/dashboard/sub_view/wallet.dart';
 import 'package:ellen/utils/colors.dart';
