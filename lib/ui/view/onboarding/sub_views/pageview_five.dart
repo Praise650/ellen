@@ -9,8 +9,8 @@ class PageViewFive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Spacer(),
         OnBoardingDetailDesc(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,9 +39,6 @@ class PageViewFive extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        Spacer(
-          flex: 5,
         ),
       ],
     );
