@@ -1,5 +1,4 @@
-import 'dart:math'; //used for the random number generator
-
+import 'package:url_launcher/url_launcher.dart';
 import 'package:walletconnect_dart/walletconnect_dart.dart';
 
 class WalletProvider {
@@ -14,13 +13,13 @@ class WalletProvider {
         url: 'https://example.com',
       ));
 
-  Future<String> createConnection(int chainId) async {
-    await _wc.createSession(
+  Future<SessionStatus> createConnection(int chainId) async {
+    return await _wc.createSession(
         chainId: chainId,
-        onDisplayUri: (url) {
+        onDisplayUri: (url) async {
           uri = url;
+          await launchUrl(Uri.parse(url));
         });
-    return uri!;
   }
 
   Future<void> send() async {}
