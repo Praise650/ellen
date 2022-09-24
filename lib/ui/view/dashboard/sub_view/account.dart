@@ -34,7 +34,7 @@ class Account extends StatelessWidget {
                 children: List.generate(
                     text.length,
                     (index) => Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             ListTile(
                               // elevation: 0,
@@ -42,13 +42,13 @@ class Account extends StatelessWidget {
                                 text[index],
                                 style: AppStyles.bodyTextStyle,
                               ),
-                              trailing: Icon(
+                              trailing: const Icon(
                                 Icons.arrow_forward_ios_rounded,
                                 color: Colors.teal,
                               ),
                             ),
                             index == 2
-                                ? SizedBox.shrink()
+                                ? const SizedBox.shrink()
                                 : Divider(
                                     thickness: 0.4,
                                     color: Colors.black.withOpacity(0.4),
@@ -69,7 +69,7 @@ class Account extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Dark mode',
                       style: AppStyles.bodyTextStyle,
                     ),
@@ -136,13 +136,13 @@ class Account extends StatelessWidget {
                 onPressed: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Logga in med  \t Bank ID'),
+                  children: const [
+                    Text('Connect Wallet'),
                   ],
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
           ],
