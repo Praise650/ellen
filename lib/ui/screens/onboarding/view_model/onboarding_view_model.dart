@@ -1,9 +1,8 @@
-import 'package:ellen/ui/view/onboarding/sub_views/pageview_six.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stacked/stacked.dart';
 
-import '../sub_views/pageview_four.dart';
+import '../sub_views/pageview_six.dart';
 import '../sub_views/pageview_three.dart';
 import '../sub_views/pageview_two.dart';
 
@@ -41,11 +40,6 @@ class OnBoardingModel {
       label: 'Market',
       icon: FontAwesomeIcons.chartLine,
       page: const PageViewThree(),
-    ),
-    OnBoardingModel(
-      label: 'Account',
-      icon: Icons.account_balance_wallet_outlined,
-      page: const PageViewFour(),
     ),
     OnBoardingModel(
       label: 'Account',

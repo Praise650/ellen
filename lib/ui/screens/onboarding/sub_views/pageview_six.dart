@@ -1,6 +1,7 @@
-import 'package:ellen/ui/view/dashboard/dashboard.dart';
 import 'package:ellen/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../dashboard/dashboard.dart';
 
 class PageViewSix extends StatelessWidget {
   const PageViewSix({Key? key}) : super(key: key);
@@ -11,10 +12,9 @@ class PageViewSix extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Spacer(flex: 3),
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             Icon(
               Icons.notifications_none,
               size: 150,
@@ -34,18 +34,14 @@ class PageViewSix extends StatelessWidget {
             )
           ],
         ),
-        Spacer(flex: 5),
         AppButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const DashBoard()));
             },
-            child: Text(
+            child: const Text(
               'Allow',
               style: TextStyle(color: Colors.white, fontSize: 24),
             )),
-        Spacer(
-          flex: 1,
-        )
       ],
     );
   }

@@ -1,4 +1,4 @@
-import 'package:ellen/ui/view/market/view_model/market_view_model.dart';
+import 'package:ellen/ui/screens/market/view_model/market_view_model.dart';
 import 'package:ellen/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

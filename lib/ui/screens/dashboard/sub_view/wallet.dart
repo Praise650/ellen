@@ -43,7 +43,7 @@ class _WalletState extends State<Wallet> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
-                  Text('Click here to view'),
+                  Text('Click here to screens'),
                 ],
               ),
             ),

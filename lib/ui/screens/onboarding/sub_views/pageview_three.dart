@@ -1,8 +1,6 @@
-import 'package:ellen/ui/view/onboarding/widgets/onboarding_overlay.dart';
-import 'package:ellen/utils/colors.dart';
+import 'package:ellen/ui/screens/onboarding/widgets/onboarding_overlay.dart';
 import 'package:ellen/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../widgets/onboarding_detail_desc.dart';
 

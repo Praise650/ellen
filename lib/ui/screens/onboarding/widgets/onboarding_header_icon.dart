@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../utils/colors.dart';
-import '../view_model/model.dart';
+import '../view_model/onboarding_view_model.dart';
 
 class OnBoardingHeaderIcon extends StatefulWidget {
   OnBoardingHeaderIcon({
