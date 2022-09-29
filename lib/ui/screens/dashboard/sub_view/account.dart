@@ -1,6 +1,6 @@
 import 'package:ellen/ui/widgets/app_button.dart';
-import 'package:ellen/utils/colors.dart';
-import 'package:ellen/utils/styles.dart';
+import 'package:ellen/ui/styles/colors.dart';
+import 'package:ellen/ui/styles/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -40,7 +40,7 @@ class Account extends StatelessWidget {
                               // elevation: 0,
                               leading: Text(
                                 text[index],
-                                style: AppStyles.bodyTextStyle,
+                                style: bodyTextStyle,
                               ),
                               trailing: Icon(
                                 Icons.arrow_forward_ios_rounded,
@@ -71,7 +71,7 @@ class Account extends StatelessWidget {
                   children: [
                     Text(
                       'Dark mode',
-                      style: AppStyles.bodyTextStyle,
+                      style: bodyTextStyle,
                     ),
                     Switch(
                       value: true,
@@ -123,11 +123,11 @@ class Account extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            const Align(
+            Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Logga on for att se din kontoinformation',
-                  style: AppStyles.bodyTextStyle,
+                  style: bodyTextStyle,
                 )),
             const SizedBox(height: 20),
             Padding(

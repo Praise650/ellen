@@ -1,5 +1,5 @@
 import 'package:ellen/ui/screens/onboarding/widgets/onboarding_overlay.dart';
-import 'package:ellen/utils/styles.dart';
+import 'package:ellen/ui/styles/texts.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widgets/onboarding_detail_desc.dart';
@@ -21,31 +21,31 @@ class PageViewThree extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
+                    children:  [
+                      const Text(
                         'Here’s your wallet',
                         style: TextStyle(color: Colors.teal, fontSize: 24),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text.rich(
-                          TextSpan(
+                          const TextSpan(
                             text:
                                 'When you’ve purchased your assets they will automatically end up here.',
                           ),
                           softWrap: true,
-                          style: AppStyles.onboardingTextStyle),
-                      SizedBox(
+                          style: onboardingTextStyle),
+                      const SizedBox(
                         height: 20,
                       ),
                       Text.rich(
-                          TextSpan(
+                          const TextSpan(
                             text:
                                 'Follow your portfolios value development and see all your transactions.',
                           ),
                           softWrap: true,
-                          style: AppStyles.onboardingTextStyle),
+                          style: onboardingTextStyle),
                     ],
                   ),
                 ),

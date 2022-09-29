@@ -2,8 +2,8 @@ import 'package:ellen/ui/screens/dashboard/sub_view/account.dart';
 import 'package:ellen/ui/screens/dashboard/sub_view/buy.dart';
 import 'package:ellen/ui/screens/dashboard/sub_view/save.dart';
 import 'package:ellen/ui/screens/dashboard/sub_view/wallet.dart';
-import 'package:ellen/utils/colors.dart';
-import 'package:ellen/utils/styles.dart';
+import 'package:ellen/ui/styles/colors.dart';
+import 'package:ellen/ui/styles/texts.dart';
 import 'package:flutter/material.dart';
 
 import '../market/market.dart';
@@ -32,7 +32,7 @@ class _DashBoardState extends State<DashBoard> {
       appBar: AppBar(
         title: Text(
           titleText[selectedIndex],
-          style: AppStyles.titleTextStyle,
+          style: titleTextStyle,
         ),
         centerTitle: true,
         backgroundColor: AppColor.backgroundColor,

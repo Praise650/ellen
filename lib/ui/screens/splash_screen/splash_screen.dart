@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/colors.dart';
-import '../../../utils/styles.dart';
+import '../../styles/colors.dart';
+import '../../styles/texts.dart';
 import '../onboarding/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -38,11 +38,11 @@ class _SplashScreenState extends State<SplashScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children:  [
               Text('Welcome to Ellen!',
-                  style: AppStyles.welcomeHeaderTextStyle),
-              SizedBox(height: 20),
-              Text(
+                  style: welcomeHeaderTextStyle),
+              const SizedBox(height: 20),
+              const Text(
                 'Please have an introduction to our platform and functions.',
                 textAlign: TextAlign.left,
                 softWrap: true,
