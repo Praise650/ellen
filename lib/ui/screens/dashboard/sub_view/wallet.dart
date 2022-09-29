@@ -1,5 +1,5 @@
 import 'package:ellen/ui/widgets/app_button.dart';
-import 'package:ellen/utils/styles.dart';
+import 'package:ellen/ui/styles/texts.dart';
 import 'package:flutter/material.dart';
 
 import '../../../dialogs/bottom_sheet.dart';
@@ -31,10 +31,10 @@ class _WalletState extends State<Wallet> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.1,
             ),
-            const Center(
+            Center(
                 child: Text(
               'See all your assets\nRight now you don’t have any assets',
-              style: AppStyles.bodyTextStyle,
+              style: bodyTextStyle,
               textAlign: TextAlign.center,
             )),
             AppButton(
@@ -43,7 +43,7 @@ class _WalletState extends State<Wallet> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
-                  Text('Click here to view'),
+                  Text('Click here to screens'),
                 ],
               ),
             ),

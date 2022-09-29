@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/colors.dart';
+import '../styles/colors.dart';
 
 class OnBoardingDetailDesc extends StatelessWidget {
   final Widget child;

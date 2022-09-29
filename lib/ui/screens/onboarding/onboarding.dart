@@ -1,9 +1,10 @@
-import 'package:ellen/ui/view/onboarding/view_model/model.dart';
-import 'package:ellen/ui/view/onboarding/widgets/onboarding_header_icon.dart';
-import 'package:ellen/utils/colors.dart';
+import 'package:ellen/ui/styles/colors.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+
+import 'view_model/onboarding_view_model.dart';
+import 'widgets/onboarding_header_icon.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -62,6 +63,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.6,
+                    margin: const EdgeInsets.symmetric(vertical: 10),
                     child: PageView.builder(
                         controller: pageController,
                         physics: const AlwaysScrollableScrollPhysics(),

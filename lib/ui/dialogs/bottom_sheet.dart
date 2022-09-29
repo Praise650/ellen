@@ -1,5 +1,5 @@
 import 'package:ellen/ui/widgets/app_button.dart';
-import 'package:ellen/utils/colors.dart';
+import 'package:ellen/ui/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

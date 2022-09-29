@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../../utils/colors.dart';
-import '../../../../utils/styles.dart';
+import '../../../styles/colors.dart';
+import '../../../styles/texts.dart';
 
 class OnBoardingOverlay extends StatelessWidget {
   const OnBoardingOverlay({Key? key}) : super(key: key);
@@ -36,28 +36,28 @@ class OnBoardingOverlay extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children:  [
                       Text(
                         'Bitcoin',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                       Text(
                         '0.023 BTC',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       )
                     ],
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         '10 670 SEK',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                       Text(
                         '+2.1%',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                     ],
                   ),
@@ -84,28 +84,28 @@ class OnBoardingOverlay extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Ethereum',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                       Text(
                         '0.023 ETH',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                     ],
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         '5000 SEK',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                       Text(
                         '+2.5%',
-                        style: AppStyles.bodyTextStyle,
+                        style: bodyTextStyle,
                       ),
                     ],
                   )

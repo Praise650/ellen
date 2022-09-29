@@ -1,4 +1,4 @@
-import 'package:ellen/utils/colors.dart';
+import 'package:ellen/ui/styles/colors.dart';
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
