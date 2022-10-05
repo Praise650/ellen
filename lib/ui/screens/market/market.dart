@@ -16,7 +16,7 @@ class Market extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 05, vertical: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 05, vertical: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: AppColor.appSecondaryColor),

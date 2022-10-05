@@ -1,108 +1,107 @@
 import 'package:flutter/material.dart';
 
 /// Will contain all the theme colors
-import 'package:flutter/material.dart';
 
 class AppColor {
-//black variation
-  static const black = Color(0xff000000);
-  static const charcoal = Color(0xff36454F);
-  static const darkGreen = Color(0xff023020);
-  static const darkPurple = Color(0xff301934);
-  static const jetBlack = Color(0xff343434);
-  static const licorice = Color(0xff1B1212);
-  static const matteBlack = Color(0xff28282B);
-  static const onyx = Color(0xff353935);
-
-  static const int blackColorValue = 0xff000000;
-
-  static const colorTeal = Colors.teal;
-  static const backgroundColor = Colors.black26;
-
-  // static const appSecondaryColor = Color(0xff36454F);
-  static const appSecondaryColor = matteBlack;
-
-  static const int primaryColorValue = 0xFF2F4FFF;
-
   static Color error = Color(0xFFE52836);
   static Color warning = Color(0xFFF6A609);
   static Color success = Color(0xFF2AC769);
-  static const Color primary = Color(primaryColorValue);
 
+  /// Swatches
+  static const int primaryColorValue = 0xFF702BD4;
   static const MaterialColor primarySwatch = MaterialColor(
     primaryColorValue,
     <int, Color>{
-      50: Color(0xFFeaebff),
-      100: Color(0xFFc9ccff),
-      200: Color(0xFFa4abff),
-      300: Color(0xFF7a89ff),
-      400: Color(0xFF576cff),
+      50: Color(0xFFE2D5F6),
+      100: Color(0xFFCFB8F1),
+      200: Color(0xFFB795E9),
+      300: Color(0xFFA072E2),
+      400: Color(0xFF884EDB),
       500: Color(primaryColorValue),
-      600: Color(0xFF2a45f3),
-      700: Color(0xFF1c39e6),
-      800: Color(0xFF0a2bdb),
-      900: Color(0xFF0006cb),
+      600: Color(0xFF5D24B1),
+      700: Color(0xFF4B1D8D),
+      800: Color(0xFF38166A),
+      900: Color(0xFF250E47),
+      1000: Color(0xFF16092A),
     },
   );
 
-  static const int secondaryColorValue = 0xFFfe337a;
+  static const int secondaryColorValue = 0xFF333333;
 
   static const MaterialColor secondarySwatch = MaterialColor(
     secondaryColorValue,
     <int, Color>{
-      50: Color(0xFFffe4ec),
-      100: Color(0xFFffbbd1),
-      200: Color(0xFFff8eb2),
-      300: Color(0xFFff5d93),
-      400: Color(secondaryColorValue),
-      500: Color(0xFFfd0062),
-      600: Color(0xFFec005f),
-      700: Color(0xFFd6005b),
-      800: Color(0xFFc10059),
-      900: Color(0xFF9b0053),
+      50: Color(0xFFD6D6D6),
+      100: Color(0xFFBBBBBB),
+      200: Color(0xFF999999),
+      300: Color(0xFF777777),
+      400: Color(0xFF555555),
+      500: Color(secondaryColorValue),
+      600: Color(0xFF2B2B2B),
+      700: Color(0xFF222222),
+      800: Color(0xFF1A1A1A),
+      900: Color(0xFF111111),
+      1000: Color(0xFF0A0A0A),
     },
   );
 
-  static const MaterialColor blackSwatch = MaterialColor(
-    blackColorValue,
+
+  static const int secondaryGraphColorValue = 0xFFEA4F18;
+
+  static const MaterialColor secondaryGraphSwatch = MaterialColor(
+    secondaryColorValue,
     <int, Color>{
-      50: Color(0xff353935),
-      100: Color(0xff28282B),
-      300: Color(0xff36454F),
+      50: Color(0xFFFBDCD1),
+      100: Color(0xFFF8C4B2),
+      200: Color(0xFFF4A78B),
+      300: Color(0xFFF18A65),
+      400: Color(0xFFED6C3F),
+      500: Color(secondaryColorValue),
+      600: Color(0xFFC34214),
+      700: Color(0xFF9C3510),
+      800: Color(0xFF75280C),
+      900: Color(0xFF4E1A08),
+      1000: Color(0xFF2F1005),
     },
   );
 
-  static const Color scaffoldBgColor = Colors.white;
+/// bgColors
+  static const scaffoldBgColor = Color(0xffEFEFEF);
+  static const splashBgColor = Color(0xff702BD4);
 
-  static Color primaryBtnBg = primarySwatch;
-  static const Color primaryAltBtnBg = Color(0xFFF4F6FF);
-  static const Color secondaryAltBtnBg = Color(0xFFDFE1FB);
-  static const Color secondaryIconBtnBg = Color(0xFFEDF0FF);
+  static const primary = Color(primaryColorValue);
+  static const appSecondaryColor = Color(0xff36454F);
+
+
+  /// Button Colors
+  static const Color primaryBtnBg = Color(0xff5D24B1);
+  static const Color primaryAltBtnBg = Color(0xFFB795E9);
+  static const Color secondaryBtnBg = Color(0xFFEFEFEF);
+  static const Color secondaryAltBtnBg = Color(0xFFFBFAFC);
+  static const Color secondaryIconBtnBg = Color(0xFF702BD4);
 
   //Title texts, captions, inputs fields and everywhere else where black is required
-  static const Color textPrimary = Color(0xFF25282B);
+  static const Color textPrimary = Color(0xFF333333);
+  //text secondary
+  static const Color textSecondary = Color(0xFF999999);
 
   // The most common headline textColor.
-  static const Color headlineTextPrimary = Color(0xFF040B45);
-
-  //text secondary
-  static const Color textSecondary = Color(0xFF52575C);
+  static const Color headlineTextPrimary = Color(0xFFFBFAFC);
 
   //inactive states
   static const Color textInactive = Color(0xFF52575C);
 
   // inputs fields
-  static const Color inputText = Color(0xFF2F2F2F);
+  static const Color inputText = Color(0xFF0A0A0A);
 
   //list dividers
   static const Color divider = Color(0xFFE8E8E8);
-
-  static const Color inputBorder = Color(0xFFBBBBBB);
+  static const boxBorder = Color(0xFF702BD4);
 
   @Deprecated("Use hintText instead")
   static const Color inputPlaceholder = Color(0xFF5E5E5E);
 
-  static const Color hintText = Color(0xFF5E5E5E);
+  static const Color hintText = Color(0xFFB795E9);
 
   static const Color onBoardingText = Color(0xFF040B45);
 
@@ -129,20 +128,13 @@ class AppColor {
 
   static const Color closeBg = Color(0xFFEDF0FF);
 
-  static const Color divider2 = Color(0xFFE5E5E5);
-
-  static const Color iconColor = Color(0xFF040B45);
-
-  static const Color lightGray = Color.fromRGBO(4, 11, 69, 1);
+  static const Color iconColor = Color(0xFF333333);
+  static const Color bottomNavIconColor = Color(0xFFBBBBBB);
 
   static const Color green = Color(0xFF37CB95);
   static const Color red = Color(0xFFE52836);
 
   static const Color bd2 = Color(0xFFECECEC);
-
-  static const boxBorder = Color(0xFFFDFDFD);
-
-  static const ratingBg = Color(0xFFF5F5F5);
 
   static const ratingPercentage = Color(0xFF5C5C5C);
 
@@ -150,11 +142,7 @@ class AppColor {
 
   static const ratingDisplay = Color(0xFF575757);
 
-  static const Color fieldColor = Color(0xFFF4F5FF);
-
-  static const Color appBtnColor = Colors.white;
+  static const Color fieldColor = Color(0xFFE2D5F6);
 
   static const Color cartDecoration = Color(0xFFF2F4FF);
-
-  static const bottomSheetHandle = Color(0xFFE2E2E2);
 }

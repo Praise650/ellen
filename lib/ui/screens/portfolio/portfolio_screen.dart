@@ -2,16 +2,16 @@ import 'package:ellen/ui/widgets/app_button.dart';
 import 'package:ellen/ui/styles/texts.dart';
 import 'package:flutter/material.dart';
 
-import '../../../dialogs/bottom_sheet.dart';
+import '../../dialogs/bottom_sheet.dart';
 
-class Wallet extends StatefulWidget {
-  const Wallet({Key? key}) : super(key: key);
+class PortfolioScreen extends StatefulWidget {
+  const PortfolioScreen({Key? key}) : super(key: key);
 
   @override
-  State<Wallet> createState() => _WalletState();
+  State<PortfolioScreen> createState() => _PortfolioScreenState();
 }
 
-class _WalletState extends State<Wallet> {
+class _PortfolioScreenState extends State<PortfolioScreen> {
   @override
   void initState() {
     super.initState();
@@ -34,7 +34,7 @@ class _WalletState extends State<Wallet> {
             Center(
                 child: Text(
               'See all your assets\nRight now you don’t have any assets',
-              style: bodyTextStyle,
+              style: kBodyText1TextStyle,
               textAlign: TextAlign.center,
             )),
             AppButton(

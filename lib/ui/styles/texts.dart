@@ -26,9 +26,9 @@ TextStyle kHeadline3TextStyle = const TextStyle(
 
 const TextStyle kAppBarTitleTextStyle = TextStyle(
     fontFamily: AppFont.heading,
-    fontWeight: FontWeight.w500,
-    color: AppColor.headlineTextPrimary,
-    fontSize: 19,
+    fontWeight: FontWeight.w700,
+    color: AppColor.textPrimary,
+    fontSize: 24,
     height: 21.75 / 19);
 
 TextStyle kHeadline4TextStyle = const TextStyle(
@@ -141,21 +141,7 @@ TextStyle kServiceNameTextStyle = const TextStyle(
   color: Colors.black,
   fontSize: 15,
 );
-
-TextStyle titleTextStyle = const TextStyle(
-  fontSize: 24,
-  color: Colors.white,
-);
-TextStyle bodyTextStyle = const TextStyle(
-  fontSize: 16,
-  color: Colors.white,
-);
 TextStyle onboardingTextStyle = const TextStyle(
   fontSize: 18,
   color: Colors.white,
-);
-TextStyle welcomeHeaderTextStyle = const TextStyle(
-  fontSize: 28,
-  color: Colors.white,
-  fontWeight: FontWeight.bold,
 );

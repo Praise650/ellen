@@ -35,12 +35,13 @@ dependencies:
     cupertino_icons: ^1.0.2
     intl: ^0.17.0
     stacked: ^2.2.5
-    get: ^4.3.8
-    get_it: ^7.2.0
+    stacked_services: ^0.8.22
     font_awesome_flutter: ^9.1.0
     google_fonts: ^2.3.2
-    walletconnect_dart: ^0.0.11
-    web3dart: ^2.4.1
+    flutter_svg: ^1.0.3
+#    walletconnect_dart: ^0.0.11
+#    web3dart: ^2.4.1
+    flutter_hooks: ^0.18.3
     url_launcher: ^6.1.5
     ethereum: ^5.0.1
 
@@ -54,6 +55,10 @@ dev_dependencies:
     # package. See that file for information about deactivating specific lint
     # rules and activating additional ones.
     flutter_lints: ^1.0.0
+    stacked_generator: ^0.5.6
+    logger: ^1.1.0
+    build_runner:
+    json_serializable: ^6.1.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -65,13 +70,10 @@ flutter:
     # the material Icons class.
     uses-material-design: true
     # To add assets to your application, add an assets section, like this:
-    # assets:
-    #   - images/a_dot_burr.jpeg
-    #   - images/a_dot_ham.jpeg
-    # An image asset can refer to one or more resolution-specific "variants", see
-    # https://flutter.dev/assets-and-images/#resolution-aware.
-    # For details regarding adding assets from package dependencies, see
-    # https://flutter.dev/assets-and-images/#from-packages
+    assets:
+        - assets/svgs/
+        - assets/svgs/navicons/
+        - assets/images/
     # To add custom fonts to your application, add a fonts section here,
     # in this "flutter" section. Each entry in this list should have a
     # "family" key with the font family name, and a "fonts" key with a
