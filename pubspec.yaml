@@ -39,8 +39,8 @@ dependencies:
     font_awesome_flutter: ^9.1.0
     google_fonts: ^2.3.2
     flutter_svg: ^1.0.3
-#    walletconnect_dart: ^0.0.11
-#    web3dart: ^2.4.1
+    walletconnect_dart: ^0.0.11
+    web3dart: ^2.4.1
     flutter_hooks: ^0.18.3
     url_launcher: ^6.1.5
     ethereum: ^5.0.1

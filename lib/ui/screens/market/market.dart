@@ -1,8 +1,13 @@
+import 'package:ellen/ui/layouts/base_scaffold_body.dart';
 import 'package:ellen/ui/screens/market/view_model/market_view_model.dart';
-import 'package:ellen/ui/styles/colors.dart';
+import 'package:ellen/ui/screens/market/widgets/general_homepage_header.dart';
+import 'package:ellen/ui/styles/style.dart';
+import 'package:ellen/ui/widgets/inputs/general_input.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stacked/stacked.dart';
+
+import 'widgets/coin_view_widget.dart';
+import 'widgets/top_mover_card_widget.dart';
 
 class Market extends StatelessWidget {
   const Market({Key? key}) : super(key: key);
@@ -12,77 +17,60 @@ class Market extends StatelessWidget {
     return ViewModelBuilder<MarketViewModel>.reactive(
         viewModelBuilder: () => MarketViewModel(),
         builder: (context, model, _) {
-          return SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 05, vertical: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColor.appSecondaryColor),
-                child: ListView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: List.generate(
-                      model.crptoCoins.length,
-                      (index) => Column(
-                            children: [
-                              ListTile(
-                                tileColor: Colors.black,
-                                leading: const Icon(
-                                  FontAwesomeIcons.bitcoin,
-                                  color: Colors.white,
-                                ),
-                                title: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      model.crptoCoins[index].coinName,
-                                      style:
-                                          const TextStyle(color: Colors.white),
-                                    ),
-                                    const Icon(
-                                      Icons.account_balance_wallet_outlined,
-                                      color: Colors.white,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          model.crptoCoins[index].rate
-                                                  .toString() +
-                                              ' %',
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                        Text(
-                                          model.crptoCoins[index].coinValue
-                                              .toString(),
-                                          style: TextStyle(color: Colors.white),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                enableFeedback: true,
-                                trailing: const Icon(
-                                  Icons.chevron_right_sharp,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              index == model.crptoCoins.length - 1
-                                  ? SizedBox.shrink()
-                                  : Divider(
-                                      color: Colors.white.withOpacity(0.4),
-                                      thickness: .2,
-                                    )
-                            ],
-                          )),
+          return BaseScaffoldBody(builder: (context, scrollController) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 24),
+                Text(
+                  'Welcome Oladimeji!',
+                  style: kHeadline2TextStyle.copyWith(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                    color: AppColor.textPrimary,
+                  ),
                 ),
-              ),
-            ),
-          );
+                const SizedBox(height: 24),
+                Stack(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: const EdgeInsets. fromLTRB(48, 55,0,55),
+                      decoration: homepageCardDeco,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 48),
+                        child: Text(
+                          'Access list of\nCryptocurrencies\nin the market',
+                          style: kHeadline3TextStyle.copyWith(
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 24),
+                const GeneralInput(),
+                const GeneralHomepageHeader(
+                  label: 'Watchlists',
+                  marginBottom: 36,
+                  child: CoinViewWidget(),
+                ),
+                const GeneralHomepageHeader(
+                  label: 'Top Movers',
+                  child: TopMoversCardWidget()
+                ),
+                GeneralHomepageHeader(
+                  label: 'Explore Bloxity',
+                  marginBottom: 48,
+                  child: Container(
+                    height: 158,
+                    color: const Color(0xffFFFFFF),
+                  ),
+                )
+              ],
+            );
+          });
         });
   }
 }

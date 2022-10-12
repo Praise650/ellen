@@ -126,22 +126,7 @@ TextStyle kHeadline7TextStyle = const TextStyle(
   fontSize: 16,
 );
 
-/// This is the service price text Style
-TextStyle kServicePriceTextStyle = const TextStyle(
-  fontFamily: AppFont.body,
-  fontWeight: FontWeight.bold,
-  color: AppColor.primary,
-  fontSize: 15,
-);
-
-/// This is the service name text Style
-TextStyle kServiceNameTextStyle = const TextStyle(
-  fontFamily: AppFont.heading,
-  fontWeight: FontWeight.bold,
-  color: Colors.black,
-  fontSize: 15,
-);
-TextStyle onboardingTextStyle = const TextStyle(
-  fontSize: 18,
-  color: Colors.white,
-);
+// TextStyle onboardingTextStyle = const TextStyle(
+//   fontSize: 18,
+//   color: Colors.white,
+// );

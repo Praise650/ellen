@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../styles/colors.dart';
 import '../styles/texts.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   CustomAppBar({
     Key? key,
     this.icon,

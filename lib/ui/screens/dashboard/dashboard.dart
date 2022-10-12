@@ -40,9 +40,9 @@ class _DashBoardState extends State<DashBoard>
             return isFirstRouteInCurrentTab;
           },
           child: BaseScaffold(
-            isAppBar: CustomAppBar(
-              title: model.bottomNavItems[model.selectedIndex].label,
-            ),
+            //  isAppBar: CustomAppBar(
+            //    title: model.bottomNavItems[model.selectedIndex].label,
+            // ),
             body: Stack(
               children: List<Widget>.generate(
                 model.bottomNavItems.length,
@@ -76,12 +76,14 @@ class _DashBoardState extends State<DashBoard>
                   model.bottomNavItems[model.selectedIndex].color,
               items: List.generate(
                 model.bottomNavItems.length,
+                //TODO: add dot for ontap wrap both item and dot in column
                 (index) => BottomNavigationBarItem(
                   icon: SvgPicture.asset(
                     model.bottomNavItems[index].icon,
                     color: model.bottomNavItems[index].color,
                   ),
                   tooltip: model.bottomNavItems[index].label,
+                  label: '',
                   activeIcon: SvgPicture.asset(
                     model.bottomNavItems[index].icon,
                     color: model.bottomNavItems[index].activeColor,

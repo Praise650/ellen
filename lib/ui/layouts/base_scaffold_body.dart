@@ -37,7 +37,7 @@ class BaseScaffoldBody extends HookWidget {
     });
 
     return Padding(
-      padding: padding ?? const EdgeInsets.symmetric(horizontal: 11),
+      padding: padding ?? const EdgeInsets.symmetric(horizontal: 36),
       child: LayoutBuilder(builder: (context, constraint) {
         return ConstrainedBox(
           constraints: BoxConstraints(minHeight: constraint.maxHeight),
