@@ -18,7 +18,10 @@ class TopMoversCardWidget extends ViewModelWidget<MarketViewModel> {
           (index) => Container(
             padding: const EdgeInsets.all(24),
             margin: const EdgeInsets.only(right: 12),
-            color: const Color(0xffffffff),
+            decoration: BoxDecoration(
+              color: const Color(0xffffffff),
+              borderRadius: BorderRadius.circular(8),
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +39,9 @@ class TopMoversCardWidget extends ViewModelWidget<MarketViewModel> {
                     const SizedBox(width: 39),
                     Text(
                       '+ ' +
-                          model.cryptoCoinsList[index].volatilityRate.toString(),
+                          model.cryptoCoinsList[index].volatilityRate
+                              .toString() +
+                          '%',
                       style: kBodyText1TextStyle.copyWith(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,
@@ -49,12 +54,23 @@ class TopMoversCardWidget extends ViewModelWidget<MarketViewModel> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(model.cryptoCoinsList[index].shortName ?? ''),
+                    Text(
+                      model.cryptoCoinsList[index].shortName ?? '',
+                      style: kBodyText1TextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     const SizedBox(height: 4),
                     // Text('NGN 3,329.10')
-                    Text('NGN '+
-                      model.cryptoCoinsList[index].coinValue.toString(),
-                      style: const TextStyle(color: Colors.black),
+                    Text(
+                      'NGN ' +
+                          model.cryptoCoinsList[index].coinValue.toString(),
+                      style: kBodyText1TextStyle.copyWith(
+                        fontSize: 12,
+                        color: AppColor.textSecondary,
+                        fontWeight: FontWeight.w500,
+                      ),
                     )
                   ],
                 )
