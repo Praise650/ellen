@@ -40,9 +40,9 @@ class _DashBoardState extends State<DashBoard>
             return isFirstRouteInCurrentTab;
           },
           child: BaseScaffold(
-            //  isAppBar: CustomAppBar(
-            //    title: model.bottomNavItems[model.selectedIndex].label,
-            // ),
+            isAppBar: CustomAppBar(
+              title: model.bottomNavItems[model.selectedIndex].label,
+            ),
             body: Stack(
               children: List<Widget>.generate(
                 model.bottomNavItems.length,

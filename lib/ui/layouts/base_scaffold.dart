@@ -64,7 +64,7 @@ class BaseScaffold extends StatelessWidget {
           style: kAppBarTitleTextStyle,
         ),
         actions: actions,
-        bottom: bottom);
+        bottom: bottom,);
   }
 
   Widget backButton(Function()? backAction) => Builder(
