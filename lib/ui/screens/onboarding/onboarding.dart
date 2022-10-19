@@ -28,7 +28,7 @@ class _OnBoardingState extends State<OnBoarding> {
         viewModelBuilder: () => OnboardingViewModel(),
         builder: (context, model, _) {
           return Scaffold(
-            backgroundColor: AppColor.backgroundColor,
+            backgroundColor: AppColor.scaffoldBgColor,
             body: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
               child: Column(

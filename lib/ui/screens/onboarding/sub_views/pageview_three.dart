@@ -35,7 +35,7 @@ class PageViewThree extends StatelessWidget {
                                 'When you’ve purchased your assets they will automatically end up here.',
                           ),
                           softWrap: true,
-                          style: onboardingTextStyle),
+                          style: TextStyle()),
                       const SizedBox(
                         height: 20,
                       ),
@@ -45,7 +45,7 @@ class PageViewThree extends StatelessWidget {
                                 'Follow your portfolios value development and see all your transactions.',
                           ),
                           softWrap: true,
-                          style: onboardingTextStyle),
+                          style: TextStyle()),
                     ],
                   ),
                 ),

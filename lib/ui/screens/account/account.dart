@@ -40,7 +40,7 @@ class Account extends StatelessWidget {
                               // elevation: 0,
                               leading: Text(
                                 text[index],
-                                style: bodyTextStyle,
+                                style: kBodyText1TextStyle,
                               ),
                               trailing: Icon(
                                 Icons.arrow_forward_ios_rounded,
@@ -71,13 +71,13 @@ class Account extends StatelessWidget {
                   children: [
                     Text(
                       'Dark mode',
-                      style: bodyTextStyle,
+                      style: kBodyText1TextStyle,
                     ),
                     Switch(
                       value: true,
                       onChanged: (value) {},
                       activeColor: Colors.white,
-                      activeTrackColor: AppColor.colorTeal,
+                      activeTrackColor: AppColor.primary,
                     )
                   ],
                 ),
@@ -102,20 +102,20 @@ class Account extends StatelessWidget {
                     children: const [
                       Icon(
                         FontAwesomeIcons.discord,
-                        color: AppColor.colorTeal,
+                        color: AppColor.primary,
                       ),
                       SizedBox(width: 40),
                       Text(
                         'Discord',
-                        style: TextStyle(color: AppColor.colorTeal),
+                        style: TextStyle(color: AppColor.primary),
                       ),
                     ],
                   ),
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
-                  side: const BorderSide(
-                    color: AppColor.colorTeal,
+                  side:  BorderSide(
+                    color: AppColor.primary,
                     width: 2,
                     style: BorderStyle.solid,
                   ),
@@ -127,7 +127,7 @@ class Account extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   'Logga on for att se din kontoinformation',
-                  style: bodyTextStyle,
+                  style: kBodyText1TextStyle,
                 )),
             const SizedBox(height: 20),
             Padding(

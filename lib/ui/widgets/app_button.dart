@@ -25,7 +25,7 @@ class AppButton extends StatelessWidget {
           onPressed: onPressed,
           style: ButtonStyle(
             backgroundColor:
-                color ?? MaterialStateProperty.all<Color>(AppColor.colorTeal),
+                color ?? MaterialStateProperty.all<Color>(AppColor.primaryBtnBg),
           ),
           child: Center(child: child),
         ),

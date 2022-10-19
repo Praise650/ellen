@@ -39,11 +39,11 @@ class OnBoardingOverlay extends StatelessWidget {
                     children:  [
                       Text(
                         'Bitcoin',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                       Text(
                         '0.023 BTC',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       )
                     ],
                   ),
@@ -53,11 +53,11 @@ class OnBoardingOverlay extends StatelessWidget {
                     children: [
                       Text(
                         '10 670 SEK',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                       Text(
                         '+2.1%',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                     ],
                   ),
@@ -87,11 +87,11 @@ class OnBoardingOverlay extends StatelessWidget {
                     children: [
                       Text(
                         'Ethereum',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                       Text(
                         '0.023 ETH',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                     ],
                   ),
@@ -101,11 +101,11 @@ class OnBoardingOverlay extends StatelessWidget {
                     children: [
                       Text(
                         '5000 SEK',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                       Text(
                         '+2.5%',
-                        style: bodyTextStyle,
+                        style: kBodyText1TextStyle,
                       ),
                     ],
                   )
