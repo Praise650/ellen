@@ -5,7 +5,6 @@ import 'package:stacked/stacked.dart';
 import '../../layouts/base_scaffold_body.dart';
 import '../../styles/style.dart';
 import '../../widgets/inputs/general_input.dart';
-import '../market/widgets/coin_view_widget.dart';
 import 'widgets/portfolio_view_widget.dart';
 
 class PortfolioScreen extends StatelessWidget {
@@ -22,12 +21,13 @@ class PortfolioScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 36),
               Container(
+                width: MediaQuery.of(context).size.width,
                 decoration: homepageCardDeco,
                 padding: const EdgeInsets.only(
                   left: 48,
                   top: 36,
                   bottom: 36,
-                  right: 79
+                  // right: 79
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

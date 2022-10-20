@@ -42,6 +42,9 @@ dependencies:
     walletconnect_dart: ^0.0.11
     web3dart: ^2.4.1
     url_launcher: ^6.1.5
+    stacked_services: ^0.8.22
+    flutter_svg: ^1.0.3
+    flutter_hooks: ^0.18.3
     ethereum: ^5.0.1
 
 dev_dependencies:
@@ -65,8 +68,10 @@ flutter:
     # the material Icons class.
     uses-material-design: true
     # To add assets to your application, add an assets section, like this:
-    # assets:
-    #   - images/a_dot_burr.jpeg
+    assets:
+       - assets/svgs/
+       - assets/svgs/navicons/
+       - assets/images/
     #   - images/a_dot_ham.jpeg
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.

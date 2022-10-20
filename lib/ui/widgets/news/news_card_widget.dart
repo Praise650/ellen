@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../styles/style.dart';
 
-class NewWidget extends StatelessWidget {
+class NewsCardWidget extends StatelessWidget {
   final String newTitle;
 
   final String? newsSubtitle;
 
-  const NewWidget({
+  const NewsCardWidget({
     Key? key,
     required this.newTitle,
     this.newsSubtitle,
@@ -17,6 +17,7 @@ class NewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 24),
+      width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
           Padding(
@@ -25,13 +26,15 @@ class NewWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const CircleAvatar(
-                      radius: 27,
+                      radius: 24,
                       backgroundColor: AppColor.primary,
                     ),
                     const SizedBox(width: 14),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           newTitle,
@@ -61,8 +64,8 @@ class NewWidget extends StatelessWidget {
           const SizedBox(height: 24),
           Container(
             alignment: Alignment.center,
-            padding: const EdgeInsets.symmetric(horizontal: 140),
-            decoration: homepageCardDeco,
+            padding: const EdgeInsets.symmetric(vertical: 110),
+            decoration: newsCardDeco,
             child: Text(
               'Bloxity',
               style: kHeadline1TextStyle.copyWith(
@@ -75,30 +78,35 @@ class NewWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 37.5),
             child: Column(
-              children: const [
-                Text('How to Harness the Power of Bloxity'),
-                SizedBox(height: 8),
-                Text(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('How to Harness the Power of Bloxity'),
+                const SizedBox(height: 8),
+                const Text(
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,'
                   ' consectetur ultricies scelerisque ame...',
+                ),
+                const SizedBox(height: 38),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: const [
+                        Icon(Icons.favorite_border),
+                        SizedBox(width: 8),
+                        Text('23.7k')
+                      ],
+                    ),
+                    const SizedBox(width: 27),
+                    const Icon(Icons.ios_share),
+                  ],
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 38),
-          Row(
-            children: [
-              Row(
-                children: const [
-                  Icon(Icons.favorite_border),
-                  SizedBox(width: 8),
-                  Text('23.7k')
-                ],
-              ),
-              const SizedBox(width: 27),
-              const Icon(Icons.ios_share),
-            ],
-          ),
+          const Divider(
+            color: Colors.grey,
+          )
         ],
       ),
     );
