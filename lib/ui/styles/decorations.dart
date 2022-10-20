@@ -7,6 +7,7 @@ final BoxDecoration homepageCardDeco = BoxDecoration(
   borderRadius: BorderRadius.circular(4),
   shape: BoxShape.rectangle,
 );
+
 final BoxDecoration newsCardDeco = BoxDecoration(
   color: AppColor.primary,
   borderRadius: BorderRadius.circular(0),
