@@ -1,54 +1,66 @@
-import 'package:ellen/ui/widgets/app_button.dart';
-import 'package:ellen/ui/styles/texts.dart';
+import 'package:ellen/ui/screens/portfolio/view_model/market_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
 
-import '../../dialogs/bottom_sheet.dart';
+import '../../layouts/base_scaffold_body.dart';
+import '../../styles/style.dart';
+import '../../widgets/inputs/general_input.dart';
+import 'widgets/portfolio_view_widget.dart';
 
-class PortfolioScreen extends StatefulWidget {
+class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({Key? key}) : super(key: key);
 
   @override
-  State<PortfolioScreen> createState() => _PortfolioScreenState();
-}
-
-class _PortfolioScreenState extends State<PortfolioScreen> {
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
-      show(context);
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
-            ),
-            Center(
-                child: Text(
-              'See all your assets\nRight now you don’t have any assets',
-              style: kBodyText1TextStyle,
-              textAlign: TextAlign.center,
-            )),
-            AppButton(
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  Text('Click here to screens'),
-                ],
+    return ViewModelBuilder<PortfolioViewModel>.nonReactive(
+      viewModelBuilder: ()=>PortfolioViewModel(),
+      builder: (context,model,_) {
+        return BaseScaffoldBody(
+          builder: (context, scrollController) => Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 36),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: homepageCardDeco,
+                padding: const EdgeInsets.only(
+                  left: 48,
+                  top: 36,
+                  bottom: 36,
+                  // right: 79
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Your Balance',
+                      style: kHeadline3TextStyle.copyWith(
+                        color: AppColor.headlineTextPrimary,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      'N8,692,630.22',
+                      style: kHeadline1TextStyle.copyWith(
+                        color: AppColor.headlineTextPrimary,
+                        fontSize: 26,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
-      ),
+              const SizedBox(height: 24),
+              const GeneralInput(
+                suffixIcon: Icons.tune_rounded,
+              ),
+              const SizedBox(height: 48),
+              const PortfolioViewWidget(),
+            ],
+          ),
+        );
+      }
     );
   }
 }

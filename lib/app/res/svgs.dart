@@ -1,6 +1,6 @@
 class AppSvgs {
   static const String homepageCard = 'assets/svgs/homepage-card.svg';
-  static const String pana =  'assets/images/pana.svg';
+  static const String pana =  'assets/svgs/pana.svg';
 
   //homepage navigation icons
   static const String navicon1 = 'assets/svgs/navicons/navicon_one.svg';

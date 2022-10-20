@@ -22,7 +22,7 @@ class PageViewTwo extends StatelessWidget {
               TextSpan(
                   text:
                       'Follow the prices APYs of the following assets for Bitcoin, Ethereum, Chainlink, Polkadot, Polygon.',
-                  style: onboardingTextStyle),
+                  style: TextStyle()),
               softWrap: true),
           const SizedBox(height: 20),
           const Align(

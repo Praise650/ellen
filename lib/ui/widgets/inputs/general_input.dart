@@ -2,8 +2,13 @@ import 'package:ellen/ui/styles/colors.dart';
 import 'package:flutter/material.dart';
 
 class GeneralInput extends StatefulWidget {
-  const GeneralInput({Key? key, this.controller}) : super(key: key);
+  const GeneralInput({
+    Key? key,
+    this.controller,
+    this.suffixIcon,
+  }) : super(key: key);
   final TextEditingController? controller;
+  final IconData? suffixIcon;
 
   @override
   State<GeneralInput> createState() => _GeneralInputState();
@@ -40,7 +45,7 @@ class _GeneralInputState extends State<GeneralInput> {
             ),
           ),
           Icon(
-            Icons.close,
+            widget.suffixIcon ?? Icons.close,
             color: AppColor.primarySwatch[200],
           ),
         ],

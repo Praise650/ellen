@@ -1,21 +1,20 @@
-import 'package:ellen/ui/screens/coin_desc_screen/coin_desc_screen.dart';
-import 'package:ellen/ui/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../styles/texts.dart';
+import '../../../styles/style.dart';
+import '../../coin_desc_screen/coin_desc_screen.dart';
 import '../view_model/market_view_model.dart';
 
-class CoinViewWidget extends ViewModelWidget<MarketViewModel> {
-  const CoinViewWidget({Key? key}) : super(key: key);
+class PortfolioViewWidget extends ViewModelWidget<PortfolioViewModel> {
+  const PortfolioViewWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, model) {
     return Column(
       children: List.generate(
         model.cryptoCoinsList.length,
-        (index) => GestureDetector(
+            (index) => GestureDetector(
           onTap: () {
             Navigator.push(
               context,
@@ -76,8 +75,8 @@ class CoinViewWidget extends ViewModelWidget<MarketViewModel> {
                         ),
                       ),
                       Text(
-                      '+ ' +
-                        model.cryptoCoinsList[index].volatilityRate.toString(),
+                        '+ ' +
+                            model.cryptoCoinsList[index].volatilityRate.toString(),
                         style: kBodyText1TextStyle.copyWith(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
